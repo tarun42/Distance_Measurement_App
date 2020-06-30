@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/javaCameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <com.xw.repo.BubbleSeekBar
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/h_min"
+        android:layout_marginBottom="21dp"
+        app:bsb_bubble_color="@color/colorAccent"
+        app:bsb_bubble_text_color="@color/colorPrimaryDark"
+        app:bsb_max="50.0"
+        app:bsb_min="-50"
+        app:bsb_progress="0"
+        app:bsb_second_track_color="#ff0000"
+        app:bsb_section_count="5"
+        app:bsb_section_text_position="bottom_sides"
+        app:bsb_show_progress_in_float="true"
+        app:bsb_show_section_mark="true"
+
+        app:bsb_show_section_text="true"
+        app:bsb_show_thumb_text="true"
+        app:bsb_track_color="#ff0101" />
+    <SeekBar
+        android:id="@+id/h_min"
+
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/h_max"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="52dp" />
+
+    <SeekBar
+        android:id="@+id/h_max"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/s_min"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="37dp" />
+
+    <SeekBar
+        android:id="@+id/s_min"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="165dp" />
+
+    <SeekBar
+        android:id="@+id/s_max"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="105dp" />
+
+    <SeekBar
+        android:id="@+id/v_min"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="59dp" />
+
+    <SeekBar
+        android:id="@+id/v_max"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="12dp" />
+    <Button
+        android:id="@+id/Red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/s_min"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="25dp"
+        android:text="RED" />
+
+    <Button
+        android:id="@+id/Blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Red"
+        android:layout_alignTop="@+id/h_max"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="57dp"
+        android:text="BLUE" />
+
+    <Button
+        android:id="@+id/Green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Red"
+        android:layout_alignBottom="@+id/s_max"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="-34dp"
+        android:text="GREEN" />
+
+    <TextView
+        android:id="@+id/dist"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="TextView" />
+
+
+</RelativeLayout>
