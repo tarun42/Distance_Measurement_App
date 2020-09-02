@@ -11,15 +11,13 @@ android:
     - platform-tools
     - build-tools-$ANDROID_BUILD_TOOLS_VERSION
     - android-$ANDROID_API_LEVEL
-    # Additional components
-    #- extra-google-google_play_services
+     Additional components
+    - extra-google-google_play_services
+    -
     #- extra-google-m2repository
     #- extra-android-m2repository
     #- addon-google_apis-google-$ANDROID_API_LEVEL
-  licenses:
-    - 'android-sdk-preview-license-.+'
-    - 'android-sdk-license-.+'
-    - 'google-gdk-license-.+'
+
 
 before_install:
   - chmod a+x gradlew
